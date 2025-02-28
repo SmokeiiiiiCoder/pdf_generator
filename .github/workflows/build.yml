@@ -28,7 +28,7 @@ jobs:
           pyinstaller --onefile generate_pdf.py
 
       - name: Upload artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: generate_pdf.exe
           path: dist/generate_pdf.exe
