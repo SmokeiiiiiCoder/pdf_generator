@@ -57,7 +57,13 @@ def create_pdf(filename, product_name, size, pack, retail_upc, expire_date, quan
 
 # 使用文件选择对话框选择图片
 Tk().withdraw()  # 隐藏Tkinter主窗口
-product_image = askopenfilename(title="选择产品图片", filetypes=[("PNG Files", "*.png")])
+product_image = askopenfilename(
+    title="选择产品图片",
+    filetypes=[
+        ("Image Files", "*.png;*.jpg;*.jpeg;*.bmp;*.gif"),  # 支持多种图片格式
+        ("All Files", "*.*")  # 可选：支持所有文件
+    ]
+)
 
 if not product_image:
     print("未选择图片文件，程序退出。")
