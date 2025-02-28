@@ -46,7 +46,7 @@ def create_pdf(filename, product_name, size, pack, retail_upc, expire_date, quan
     story.append(Spacer(1, 12))
     
     # Add expire date
-    story.append(Paragraph("Expire Date: {}".format(expire_date), styles['BodyText']))
+    story.append(Paragraph("Expire Date(MM/DD/YYYY): {}".format(expire_date), styles['BodyText']))
     story.append(Spacer(1, 12))
     
     # Add quantity
